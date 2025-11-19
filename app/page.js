@@ -1,13 +1,14 @@
-import Navbar from "@/app/components/Navbar";
-import Hero from "./components/Hero";
-import Contact from "./components/Contact";
+import React from 'react'
+import Contact from './components/Contact.js'
+import Hero from './components/Hero.js'
 
-export default function Home() {
+const page = () => {
   return (
     <>
-    <Navbar/>
-    <Hero/>
-    <Contact/>
+      <Hero/>
+      <Contact />
     </>
-  );
+  )
 }
+
+export default page

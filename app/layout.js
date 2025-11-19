@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import "./css/navbar.css";
-import './css/BlobCursor.css';
+import Navbar from "./components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,13 +14,17 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Olivez",
-  description: "Portfolio",
+  description: "Kaifi's Portfolio",
+  icons: [
+    { url: "/favicon.svg", type: "image/svg+xml" }
+  ]
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Navbar/>
         {children}
       </body>
     </html>
